@@ -32,6 +32,8 @@ class Tabs extends Component {
 
     this.handleTabClick = this.handleTabClick.bind(this);
     //使用immutable创建一个新的对象
+    //https://segmentfault.com/a/1190000005920644 
+    //序列化 children, 点击导航再次渲染的时候， 因为children序列号没有变化，所以不会重现渲染
     this.immChildren = Seq(currProps.children);
 
     let activeIndex;
